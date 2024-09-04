@@ -1,23 +1,14 @@
-/* styles.css */
-
-/* Reset default styles */
-body, h1, h2, p, a {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
-}
-
 /* Basic styling for the body */
 body {
-    background-color: #f4f4f4;
+    background-color: #ffffff; /* Nền trắng để dễ nhìn */
     color: #333;
 }
 
 /* Header styling */
 header {
-    background-color: #003366;
-    color: #fff;
+    background-color: #ffffff; /* Nền trắng */
+    color: #c8102e; /* Đỏ đậm cho chữ */
+    border-bottom: 2px solid #c8102e; /* Đường viền đỏ để tạo điểm nhấn */
     padding: 20px 0;
 }
 
@@ -42,7 +33,7 @@ header nav ul li {
 }
 
 header nav ul li a {
-    color: #fff;
+    color: #c8102e; /* Đỏ đậm cho liên kết */
     text-decoration: none;
     font-weight: bold;
 }
@@ -53,14 +44,15 @@ header nav ul li a:hover {
 
 /* Hero section styling */
 .hero {
-    background-color: #003366;
-    color: #fff;
+    background-color: #ffcc00; /* Vàng nhạt */
+    color: #333; /* Chữ màu tối để dễ đọc */
     text-align: center;
     padding: 100px 20px;
 }
 
 .hero h1 {
     font-size: 3rem;
+    color: #c8102e; /* Đỏ đậm cho tiêu đề */
 }
 
 .hero p {
@@ -87,12 +79,13 @@ header nav ul li a:hover {
 
 .features .feature h2 {
     margin-bottom: 10px;
+    color: #c8102e; /* Đỏ đậm cho tiêu đề */
 }
 
 /* Footer styling */
 footer {
-    background-color: #003366;
-    color: #fff;
+    background-color: #f4f4f4; /* Nền sáng */
+    color: #333;
     text-align: center;
     padding: 20px 0;
 }
@@ -102,7 +95,7 @@ footer .social-media {
 }
 
 footer .social-media a {
-    color: #fff;
+    color: #c8102e; /* Đỏ đậm cho liên kết */
     text-decoration: none;
     margin: 0 10px;
 }
