@@ -1,105 +1,403 @@
-/* Basic styling for the body */
-body {
-    background-color: #ffffff; /* Nền trắng để dễ nhìn */
-    color: #333;
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
-/* Header styling */
+body {
+    font-family: "Segoe UI", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+    background-color: #f7f8fa;
+    color: #1f2430;
+    line-height: 1.6;
+}
+
+img {
+    max-width: 100%;
+}
+
+a {
+    color: inherit;
+}
+
+.container {
+    width: min(1200px, 92%);
+    margin: 0 auto;
+}
+
 header {
-    background-color: #ffffff; /* Nền trắng */
-    color: #c8102e; /* Đỏ đậm cho chữ */
-    border-bottom: 2px solid #c8102e; /* Đường viền đỏ để tạo điểm nhấn */
-    padding: 20px 0;
+    background-color: #fff;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+    position: sticky;
+    top: 0;
+    z-index: 10;
 }
 
 header .container {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 20px;
+    gap: 32px;
+    padding: 16px 0;
 }
 
-header .logo img {
-    max-width: 90px;
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 16px;
 }
 
-header nav ul {
+.logo img {
+    width: 70px;
+    height: auto;
+}
+
+.company-meta {
+    display: flex;
+    flex-direction: column;
+    font-size: 0.9rem;
+    color: #6a7181;
+}
+
+nav ul {
     list-style: none;
     display: flex;
+    gap: 20px;
 }
 
-header nav ul li {
-    margin-left: 20px;
-}
-
-header nav ul li a {
-    color: #c8102e; /* Đỏ đậm cho liên kết */
+nav a {
     text-decoration: none;
-    font-weight: bold;
+    font-weight: 600;
+    color: #1f2430;
+    padding: 6px 10px;
+    border-radius: 6px;
 }
 
-header nav ul li a:hover {
-    text-decoration: underline;
+nav a:hover,
+nav .cta-link {
+    color: #fff;
+    background-color: #c8102e;
 }
 
-/* Hero section styling */
 .hero {
-    background-color: #ffcc00; /* Vàng nhạt */
-    color: #333; /* Chữ màu tối để dễ đọc */
-    text-align: center;
-    padding: 100px 20px;
+    background: linear-gradient(120deg, #fff5e1, #fef3f2);
+    padding: 80px 0;
 }
 
-.hero h1 {
-    font-size: 3rem;
-    color: #c8102e; /* Đỏ đậm cho tiêu đề */
+.hero .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 32px;
+    align-items: center;
 }
 
-.hero p {
-    font-size: 1.5rem;
+.hero-text h1 {
+    font-size: clamp(2.2rem, 5vw, 3.4rem);
+    margin-bottom: 16px;
+    color: #c8102e;
 }
 
-/* Features section styling */
-.features {
-    padding: 40px 20px;
+.hero-text .subtitle {
+    color: #4c5366;
+    margin-bottom: 24px;
 }
 
-.features .container {
+.hero-actions {
     display: flex;
-    justify-content: space-around;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-bottom: 32px;
 }
 
-.features .feature {
+.btn {
+    padding: 12px 20px;
+    border-radius: 999px;
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    cursor: pointer;
+}
+
+.btn.primary {
+    background-color: #c8102e;
+    color: #fff;
+}
+
+.btn.ghost {
+    border: 1px solid #c8102e;
+    color: #c8102e;
+    background: transparent;
+}
+
+.btn.full {
+    width: 100%;
+}
+
+.hero-stats {
+    list-style: none;
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+}
+
+.hero-stats li {
+    display: flex;
+    flex-direction: column;
+    font-size: 0.9rem;
+    color: #6a7181;
+}
+
+.hero-stats strong {
+    font-size: 1.8rem;
+    color: #1f2430;
+}
+
+.hero-panel {
     background-color: #fff;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 30%;
+    border-radius: 16px;
+    padding: 24px;
+    box-shadow: 0 20px 40px rgba(17, 24, 39, 0.08);
 }
 
-.features .feature h2 {
-    margin-bottom: 10px;
-    color: #c8102e; /* Đỏ đậm cho tiêu đề */
+.hero-panel h3 {
+    margin-bottom: 12px;
 }
 
-/* Footer styling */
-footer {
-    background-color: #f4f4f4; /* Nền sáng */
-    color: #333;
+.hero-panel ul {
+    list-style: disc;
+    margin-left: 20px;
+    color: #4c5366;
+}
+
+.hero-panel .note {
+    margin-top: 16px;
+    font-size: 0.85rem;
+    color: #6a7181;
+}
+
+section {
+    padding: 72px 0;
+}
+
+.bg-light {
+    background-color: #fff;
+}
+
+.section-header {
     text-align: center;
-    padding: 20px 0;
+    margin-bottom: 40px;
 }
 
-footer .social-media {
+.eyebrow {
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    font-size: 0.75rem;
+    color: #c8102e;
+    margin-bottom: 12px;
+}
+
+.section-header h2 {
+    font-size: 2rem;
+    margin-bottom: 12px;
+}
+
+.section-header p {
+    color: #4c5366;
+}
+
+.about-grid,
+.card-grid,
+.solutions-grid,
+.projects-grid,
+.blog-list,
+.testimonial-grid,
+.contact-grid {
+    display: grid;
+    gap: 24px;
+}
+
+.about-grid {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.about-grid article {
+    background-color: #fff;
+    border-radius: 12px;
+    padding: 24px;
+    box-shadow: 0 10px 30px rgba(17, 24, 39, 0.08);
+}
+
+.about-grid ul {
+    margin-left: 18px;
+    color: #4c5366;
+}
+
+.card-grid {
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
+.card {
+    background-color: #fff;
+    border-radius: 12px;
+    padding: 24px;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 30px rgba(17, 24, 39, 0.12);
+}
+
+.solutions-grid {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.solutions-grid article {
+    background-color: #fff;
+    padding: 24px;
+    border-radius: 12px;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.solutions-grid ul {
+    margin-left: 16px;
+    color: #4c5366;
+}
+
+.projects-grid {
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+.projects-grid article,
+.blog-list article,
+.testimonial-grid article {
+    background-color: #fff;
+    border-radius: 12px;
+    padding: 24px;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.blog-list article span {
+    display: block;
+    margin-top: 12px;
+    color: #6a7181;
+    font-size: 0.9rem;
+}
+
+.testimonial-grid {
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
+.testimonial-grid p {
+    font-style: italic;
+    color: #2f3547;
+}
+
+.contact-grid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+.contact-info {
+    background-color: #fff;
+    border-radius: 12px;
+    padding: 24px;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.contact-info ul {
+    list-style: none;
+    margin-top: 16px;
+    color: #4c5366;
+}
+
+.contact-info li + li {
     margin-top: 10px;
 }
 
-footer .social-media a {
-    color: #c8102e; /* Đỏ đậm cho liên kết */
-    text-decoration: none;
-    margin: 0 10px;
+.contact-cta {
+    margin-top: 16px;
+    background-color: #fff5f5;
+    border-radius: 10px;
+    padding: 16px;
+    color: #c8102e;
 }
 
-footer .social-media a:hover {
+.contact-form {
+    background-color: #fff;
+    border-radius: 12px;
+    padding: 24px;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    font-size: 1rem;
+    font-family: inherit;
+}
+
+.contact-form label {
+    font-weight: 600;
+    color: #1f2430;
+}
+
+.form-note {
+    font-size: 0.85rem;
+    color: #6a7181;
+    text-align: center;
+}
+
+footer {
+    background-color: #0f172a;
+    color: #fff;
+    padding: 24px 0;
+}
+
+.footer-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-items: center;
+    text-align: center;
+}
+
+.social-media {
+    display: flex;
+    gap: 20px;
+}
+
+.social-media a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.social-media a:hover {
     text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: flex-end;
+    }
+
+    header .container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .hero-stats {
+        flex-direction: column;
+        align-items: flex-start;
+    }
 }
